@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="pipi"></div>
+</body>
+
+<script>
+
+    fetch("http://localhost:3000/api/cathingory")
+        .then(res => res.json())
+        .then(json => {
+            const container = document.getElementById("pipi")
+            pipi.innerText = JSON.stringify(json)
+        })
+
+</script>
+
+</html>
