@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.alphacoders.com%2F188%2F188121.jpg&f=1&nofb=1&ipt=18cc6ad9beb825f26857dd4a0188806d38f302f12c06e285f79cbd51efe9bab4&ipo=images");
+}
+
