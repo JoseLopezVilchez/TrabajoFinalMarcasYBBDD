@@ -12,92 +12,101 @@
 
     </div>
 
-    <!-- info de usuario + friendlist -->
-    <div class="flex flex-col place-items-center">
-        <!-- info usuario -->
-        <div class="infoProfile">
-            <img src="" alt="">
-            <!-- img usuario + username -->
-            <div class="flex flex-row justify-center items-center ">
-                <img src="https://placehold.co/40" alt="">
-                <div class="username">
-                    <h2>Username</h2>
-                    <p>@nick</p>
-                </div>
-            </div>
-            <!-- botones en el user profile -->
-            <div class="flex justify-end items-center">
-                <button type="button" class="follow"> Seguir+</button>
-                <button type="button"></button>
-            </div>
-            <!-- datos generales del usuario -->
-            <div class="flex flex-row place-items-center">
-                <div class="">
-                    <h2>Amigos</h2>
-                    <p>0</p>
-                </div>
-                <div class="">
-                    <h2>Actividades</h2>
-                    <p>0</p>
-                </div >
-                <div class="">
-                    <h2>Verficados</h2>
-                    <p>0</p>
-                </div>
-                <div class="">
-                    <h2>Mentiras</h2>
-                    <p>0</p>
-                </div>
-            </div>
-
-        </div>
-        <!-- friendlist -->
-        <div class="flex flex-col"> 
-
-            <div class="frend">
-                <img src="" alt="">
-                <div class="dataFrend">
-                    <h2>FriendUsername</h2>
-                    <div class="nick_buttons">
-                        <p>@friendNick</p>
-                        <button type="button" class="compareTo"><img src="" alt="iconoComparar"></button>
-                        <button type="button" class="delete"><img src="" alt="iconoDeleteFriend"></button>
+    <div class="flex  flex-row w-auto justify-around ">
+            <!-- info de usuario + friendlist -->
+        <div class="flex flex-col place-items-center  w-2/5 mb-5">
+            <!-- info usuario -->
+            <div class="infoProfile">
+                <img src="https://placehold.co/600x100" class="mb-5" alt="">
+                <!-- img usuario + username -->
+                <div class="flex flex-row justify-start items-center ">
+                    <img src="https://placehold.co/100" alt="">
+                    <!-- username + nick -->
+                    <div class="ml-3">
+                        <h2>Username</h2>
+                        <p>@nick</p>
                     </div>
                 </div>
+                <!-- botones en el user profile -->
+                <div class="flex justify-end items-center">
+                    <button type="button" class="follow"> Seguir+</button>
+                    <button type="button"></button>
+                </div>
+                <!-- datos generales del usuario -->
+                <div class="flex flex-row justify-around items-center mb-10">
+                    <div class="">
+                        <h2>Amigos</h2>
+                        <p>0</p>
+                    </div>
+                    <div class="">
+                        <h2>Actividades</h2>
+                        <p>0</p>
+                    </div >
+                    <div class="">
+                        <h2>Verficados</h2>
+                        <p>0</p>
+                    </div>
+                    <div class="">
+                        <h2>Mentiras</h2>
+                        <p>0</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- friendlist -->
+            <div class="flex flex-col justify-center items-center w-2/5"> 
+
+                <!-- friend -->
+                <div class="flex justify-center items-center">
+                    <div>
+
+                    </div>
+                    <img src="https://placehold.co/100" alt="">
+                    <div class="dataFrend">
+                        <h2>FriendUsername</h2>
+                        <div class="nick_buttons">
+                            <p>@friendNick</p>
+                            <button type="button" class="compareTo"><img src="https://placehold.co/15" alt="iconoComparar"></button>
+                            <button type="button" class="delete"><img src="https://placehold.co/15" alt="iconoDeleteFriend"></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- Comparador de estadísticas 1v1 -->
+        <div class="flex flex-col justify-center w-2/5">
+
+            <!-- img perfil del usuario que compara -->
+            <img src="" alt="">
+            <!-- iconos de los 2 usuarios  -->
+            <div class="flex flex-row justify-evenly">
+
+                <!-- perfil del que compara -->
+                <div class="flex flex-col">
+                    <img src="https://placehold.co/60" alt="iconoUser">
+                    <p>@nickname</p>
+                </div>
+
+                <!-- perfil del comparado -->
+                <div class="flex flex-col">
+                    <img src="https://placehold.co/60" alt="iconoUser">
+                    <p>@nickname</p>
+                </div>
+
+            </div>
+
+            <!-- gráfica a lo jojos -->
+            <div class="">
+
             </div>
 
 
         </div>
 
     </div>
-    <!-- Comparador de estadísticas 1v1 -->
-    <div class="flex flex-col place-items-center">
-
-        <!-- img perfil del usuario que compara -->
-        <img src="" alt="">
-        <!-- iconos de los 2 usuarios  -->
-        <div class="flex flex-col">
-
-            <div class="perfilComparador">
-                <img src="" alt="iconoUser">
-                <p>@nickname</p>
-            </div>
-
-            <div class="perfilComparado">
-                <img src="" alt="iconoUser">
-                <p>@nickname</p>
-            </div>
-
-        </div>
-
-        <!-- gráfica a lo jojos -->
-        <div class="">
-
-        </div>
-
-
-    </div>
-
 
 
 
