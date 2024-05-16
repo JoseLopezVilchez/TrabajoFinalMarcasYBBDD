@@ -13,6 +13,7 @@
     "watch": "npm-run-all -p watch:tailwind start"
   },
   "dependencies": {
+    "chart.js": "^4.4.2",
     "flowbite": "^2.3.0"
   }
 }
