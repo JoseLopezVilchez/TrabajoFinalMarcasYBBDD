@@ -114,10 +114,10 @@
     <!-- TODO hay que integrar cada apartado como un desplegable de cara a los moviles -->
     <div class="flex flex-col sm:flex-row justify-center">
 
-        <div class="w-full sm:max-w-lg flex justify-end flex-col mx-2"> <!-- columna A -->
+        <div class="w-full sm:max-w-lg flex justify-end flex-col sm:mx-2"> <!-- columna A -->
 
             <!-- Perfil -->
-            <article id="perfilusuario" class="w-full flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <article id="perfilusuario" class="w-full flex flex-col bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <div style="background-image: url(https://images.alphacoders.com/464/464282.jpg);" class="bg-center bg-no-repeat bg-cover w-full h-32"></div>
                 <div class="pl-6 pr-6 pb-6 flex flex-col">
                     <div class="flex flex-row justify-start">
@@ -156,7 +156,7 @@
             <!-- Thingos -->
             <article id="listaactividades">
 
-                <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-full p-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                     <div class="flex items-center justify-between mb-4">
                         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Thingos por hacer</h5>
                     </div>
@@ -201,10 +201,10 @@
             </article> <!-- ---------------------------- -->
         </div>
 
-        <div class="w-full sm:max-w-lg md:max-w-full flex justify-start"> <!-- columna B (subdividida) -->
+        <div class="w-full sm:max-w-lg md:max-w-full flex flex-col sm:flex-row md:flex-col justify-start sm:mx-2"> <!-- columna B (subdividida) -->
 
             <!-- Feed -->
-            <article id="feed" class="w-full sm:max-w-lg min-w-max mx-2 flex flex-col">
+            <article id="feed" class="w-full sm:max-w-lg min-w-max flex flex-col">
                 <div class=""> <!-- ejemplo de entrada del feed -->
                     <div class="flex items-center space-x-2 rtl:space-x-reverse"> <!-- fecha del thingo -->
                         <span class="text-sm font-normal text-gray-500 dark:text-gray-400">08 / 11 / 2024</span>
@@ -249,15 +249,47 @@
                 
             </article> <!-- -------------------------- -->
 
-            <div class="w-full sm:max-w-lg mx-2">
+            <div class="w-full sm:max-w-lg">
                 <!-- Sugerencias amigos -->
-                <article id="sugerenciaamigos"></article>
+                <article id="sugerenciaamigos">
+
+                    <!-- ejemplo de sugerencia de amigos -->
+                    <div class="flex flex-row justify-center w-full align-middle min-h-max dark:text-white leading-1.5">
+                        <div class="min-w-max z-10 -mr-8"> <!-- img del usuario que hizo el thingo -->
+                            <img class="w-32 h-32 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
+                        </div>
+                        <div class="flex flex-row-reverse lg:flex-col justify-start w-full max-h-24 p-2 ps-12 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-r-xl">
+                            <div>
+                                <!-- nickname del usuario -->
+                                <span class="mb-1 text-xl font-extrabold">Chaddicus Maximus</span>
+                                <!-- Mensaje -->
+                                <p class="font-normal text-gray-700 dark:text-gray-400">#chadman34</p>
+                            </div>
+                            <div class="flex flex-col lg:flex-row lg:justify-end justify-center align-middle">
+                                <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                    </svg> 
+                                </a>
+                                <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div> 
+                    </div>
+                </article>
 
                 <!-- Sugerencias thingos -->
-                <article id="sugerenciathingos"></article>
+                <article id="sugerenciathingos">
+
+                </article>
 
                 <!-- Trending -->
-                <article id="trending"></article>
+                <article id="trending">
+
+                </article>
             </div>
         </div>
 
