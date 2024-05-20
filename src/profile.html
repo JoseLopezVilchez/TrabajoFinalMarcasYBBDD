@@ -8,24 +8,22 @@
 </head>
 <body class="bg-[#242038]">
     <!-- Barra menú Superior (inProgress) -->
-    <div class="bg-[#3D3564] h-16 mb-10">
+    <div class="bg-[#3D3564] w-full  h-16 mb-10">
         <img src="" alt="">
-
-        
     </div>
 
     <!-- contenedor para separar el contenido en 2 columnas -->
-    <div class="flex  flex-row w-auto justify-around ">
+    <div class="flex  flex-col w-auto justify-center items-center sm:flex-row  sm:items-start  sm:justify-around ">
             <!-- info de usuario + lista de amigos -->
-        <div class="flex flex-col place-items-center w-2/5 px-2 py-5 rounded-xl bg-[#3D34]">
+        <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl bg-slate-300       sm:w-2/5 ">
             <!-- info usuario -->
-            <div class="rounded-lg bg-[#3D3564] mb-20 w-10/12">
-                <img src="https://placehold.co/900x100" class="rounded-t-xl mb-5" alt="">
+            <div class="rounded-2xl bg-[#3D3564] mb-10 w-10/12">
+                <img src="https://placehold.co/900x200" class="rounded-t-xl mb-5" alt="">
                 <!-- img usuario + nombre de usuario -->
-                <div class="flex flex-row justify-start items-center mx-5 ">
+                <div class="flex flex-col justify-center items-center mx-5  sm:flex-row  sm:justify-start   ">
                     <img src="https://placehold.co/150" alt="">
                     <!-- nombre usuario + apodo Usuario -->
-                    <div class="ml-5 text-4xl text-white " >
+                    <div class="flex flex-col text-4xl text-white justify-center items-center sm:items-start  sm:ml-5" >
                         <h2>Username</h2>
                         <p>@nick</p>
                     </div>
@@ -35,38 +33,45 @@
                     <button type="button" class="text-black bg-[#FEB52A] rounded-md px-3 py-1"> Seguir+</button>
                 </div>
                 <!-- datos generales del usuario -->
-                <div class="flex flex-row justify-between items-center mb-10 mx-5">
+                <div class="flex flex-row justify-center items-center my-8 mx-5 ">
 
-                    <div class="text-center p-1 text-yellow-200 border-4 border-spacing-5 border-yellow-200 rounded-md px-4 py-2">
-                        <h2>Amigos</h2>
-                        <p>0</p>
+                    <!-- columna 1 -->
+                    <div class="flex flex-col  sm:flex-row">
+                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg sm:w-[130px]   ">
+                            <h2>Amigos</h2>
+                            <p>0</p>
+                        </div>
+                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg  sm:w-[130px]">
+                            <h2>Actividades</h2>
+                            <p>0</p>
+                        </div >
                     </div>
-                    <div class="text-center p-1 text-yellow-200 border-4 border-spacing-5 border-yellow-200 rounded-md px-4 py-2">
-                        <h2>Actividades</h2>
-                        <p>0</p>
-                    </div >
-                    <div class="text-center p-1 text-yellow-200 border-4 border-spacing-5 border-yellow-200 rounded-md px-4 py-2">
-                        <h2>Verficados</h2>
-                        <p>0</p>
-                    </div>
-                    <div class="text-center p-1 text-yellow-200 border-4 border-spacing-5 border-yellow-200 rounded-md px-4 py-2">
-                        <h2>Mentiras</h2>
-                        <p>0</p>
+                    <!-- columna 2 -->
+
+                    <div class="flex flex-col  sm:flex-row">
+                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg  sm:w-[130px]">
+                            <h2>Verficados</h2>
+                            <p>0</p>
+                        </div>
+                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2 m-4 text-sm        sm:text-lg  sm:w-[130px]">
+                            <h2>Mentiras</h2>
+                            <p>0</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <!-- friendlist -->
-            <div class="flex flex-col justify-center items-center w-10/12 rounded-lg bg-[#3D3564] "> 
+            <div class="flex flex-col justify-start items-center w-10/12 rounded-xl bg-[#3D3564] "> 
 
                 <h2 class="text-4xl text-white my-5">FriendList</h2>
 
                 <!-- friend -->
-                <div class="flex justify-start items-center w-10/12  my-6">
+                <div class="flex justify-start items-center w-10/12 my-6" >
                     <!-- separador para hacer grande la img -->
                     <div class="flex flex-row justify-center items-center w-full">
-                        <img class="z-10" src="https://placehold.co/150" alt="">
-                        <div class=" text-3xl text-white  w-full h-auto pl-14 -ml-10 border-2 border-yellow-200">
+                        <img class="z-10 " src="https://placehold.co/150" alt="">
+                        <div class=" text-lg text-white  w-full h-auto pl-14 -ml-10 border-2 border-yellow-200        sm:text-3xl     ">
                             <h2>FriendUsername</h2>
                             <p>@friendNick</p>
                             <div class="flex flex-row justify-end items-center">
@@ -80,16 +85,17 @@
                 </div>
             </div>
         </div>
+
         <!-- Comparador de estadísticas 1v1 -->
-        <div class=" flex flex-col items-center px-2 py-5 w-2/5 rounded-xl bg-slate-300">
+        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-2/5">
            
-            <!--Que sí Blas Que síiiiiiiiiiiiiii-->
-            <div class="flex flex-col w-10/12 rounded-xl bg-[#3D3564] h-full">
-                <img src="https://placehold.co/900x100" class="rounded-t-xl mb-5" alt="">
+            <!-- perfiles juntos-->
+            <div class="flex flex-col w-10/12 rounded-2xl bg-[#3D3564] h-full">
+                <img src="https://placehold.co/900x200" class="rounded-t-xl" alt="">
                 <!-- img perfil del usuario que compara -->
                 <img src="" alt="">
                 <!-- iconos de los 2 usuarios  -->
-                <div class="flex flex-row justify-evenly">
+                <div class="flex flex-row justify-evenly mt-20">
                     <!-- perfil del que compara -->
                     <div class="flex flex-col place-items-center">
                         <img src="https://placehold.co/150" alt="iconoUser">
