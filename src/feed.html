@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed</title>
     <link rel="stylesheet" href="./output.css">
+
+    <style>
+
+        .dropdownpersonalizado {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-in-out;
+        }
+
+    </style>
 </head>
 <body class="bg-center bg-no-repeat bg-cover bg-gradient-to-br from- from-slate-900 from-10% via-purple-800 via-70% to-blue-800 to-90%"><div class="flex flex-col w-max h-screen mx-auto">
     
@@ -12,7 +22,7 @@
     <header class="fixed z-20 w-full">
         <!-- Codigo de la barra de navegacion -->
         <nav>
-            <div class="w-full sm:w-max flex justify-between sm:rounded-r-lg dark:bg-gray-900 border-gray-200 p-4 flex-wrap items-center h-full">
+            <div class="w-full sm:w-max flex justify-between sm:rounded-r-lg bg-white border-gray-600 dark:bg-gray-900 dark:border-gray-200 p-4 flex-wrap items-center h-full">
                 <a class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
                     <img src="./resources/mascota2.png" class="h-8" alt="Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BucketList</span>
@@ -222,7 +232,7 @@
                             <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Feed</h5>
                         </div>
                         <div>
-                            <button id="buttonfeed" class="flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                            <button id="buttonfeed" onclick="" class="flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                 <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                                 </svg>
@@ -231,7 +241,7 @@
                     </div>
 
                     <div class="flow-root">
-                        <ul id="dropdownfeed" role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <ul id="dropdownfeed" role="list" class="dropdownpersonalizado divide-y divide-gray-200 dark:divide-gray-700">
 
                             <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
                             <li class="py-3 sm:py-4">
