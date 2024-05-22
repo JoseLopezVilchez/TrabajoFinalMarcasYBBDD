@@ -6,7 +6,7 @@
     <title>Profile</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-[#242038]">
+<body class="bg-gradient-to-br from- from-slate-900 from-10% via-purple-800 via-70% to-blue-800 to-90%">
     <!-- Barra menú Superior (inProgress) -->
     <div class="bg-[#3D3564] w-full  h-16 mb-10">
         <img src="" alt="">
@@ -17,54 +17,80 @@
             <!-- info de usuario + lista de amigos -->
         <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl bg-slate-300       sm:w-2/5 ">
             <!-- info usuario -->
-            <div class="rounded-2xl bg-[#3D3564] mb-10 w-10/12">
-                <img src="https://placehold.co/900x200" class="rounded-t-xl mb-5" alt="">
-                <!-- img usuario + nombre de usuario -->
-                <div class="flex flex-col justify-center items-center mx-5  sm:flex-row  sm:justify-start   ">
-                    <img src="https://placehold.co/150" alt="">
-                    <!-- nombre usuario + apodo Usuario -->
-                    <div class="flex flex-col text-4xl text-white justify-center items-center sm:items-start  sm:ml-5" >
-                        <h2>Username</h2>
-                        <p>@nick</p>
-                    </div>
-                </div>
-                <!-- botones en el user profile. Botón de seguir-->
-                <div class="flex justify-end items-center mx-5 my-3">
-                    <button type="button" class="text-black bg-[#FEB52A] rounded-md px-3 py-1"> Seguir+</button>
-                </div>
-                <!-- datos generales del usuario -->
-                <div class="flex flex-row justify-center items-center my-8 mx-5 ">
-
-                    <!-- columna 1 -->
-                    <div class="flex flex-col  sm:flex-row">
-                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg sm:w-[130px]   ">
-                            <h2>Amigos</h2>
-                            <p>0</p>
+            <div class="rounded-3xl w-full">
+                <article id="perfilusuario" class="w-full flex flex-col mb-4 rounded-2xl bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div style="background-image: url(https://images.alphacoders.com/464/464282.jpg);" class="bg-center bg-no-repeat bg-cover rounded-t-2xl  w-full  h-32"></div>
+                    <div class="pl-6 pr-6 pb-6 flex flex-col">
+                        <div class="flex flex-row justify-start">
+                            <a class="cursor-pointer"><img class="w-20 h-20 rounded-full -translate-y-1/2 mr-6" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg" alt=""></a>
+                            <dl class="flex flex-col text-gray-900 dark:text-white pt-2">
+                                <a class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">Chaddicus Maximus</dt></a>
+                                <dd class="text-gray-500 dark:text-gray-400">@chadman34</dd>
+                            </dl>
                         </div>
-                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg  sm:w-[130px]">
-                            <h2>Actividades</h2>
-                            <p>0</p>
-                        </div >
-                    </div>
-                    <!-- columna 2 -->
-
-                    <div class="flex flex-col  sm:flex-row">
-                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2  m-4 text-sm       sm:text-lg  sm:w-[130px]">
-                            <h2>Verficados</h2>
-                            <p>0</p>
+                        <div>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                         </div>
-                        <div class="text-center p-1 text-yellow-200 border-4 border-spacing-3 w-[110px] border-yellow-200 rounded-md px-4 py-2 m-4 text-sm        sm:text-lg  sm:w-[130px]">
-                            <h2>Mentiras</h2>
-                            <p>0</p>
+                        <div>
+                            <dl class="flex justify-between text-gray-900 dark:text-white">
+                                <div class="flex flex-col items-center justify-center">
+                                    <a class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">73M+</dt></a>
+                                    <dd class="text-gray-500 dark:text-gray-400">Amigos</dd>
+                                </div>
+                                <div class="flex flex-col items-center justify-center">
+                                    <a class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">100M+</dt></a>
+                                    <dd class="text-gray-500 dark:text-gray-400">Actividades</dd>
+                                </div>
+                                <div class="flex flex-col items-center justify-center">
+                                    <a class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">1000s</dt></a>
+                                    <dd class="text-gray-500 dark:text-gray-400">Mentiras</dd>
+                                </div>
+                                <div class="flex flex-col items-center justify-center">
+                                    <a class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">1B+</dt></a>
+                                    <dd class="text-gray-500 dark:text-gray-400">Verificados</dd>
+                                </div>
+                            </dl>
                         </div>
                     </div>
-                </div>
+                </article> 
 
             </div>
             <!-- friendlist -->
-            <div class="flex flex-col justify-start items-center w-10/12 rounded-xl bg-[#3D3564] "> 
+            <div class="flex flex-col justify-start items-center w-full rounded-xl bg-[#3D3564] "> 
 
                 <h2 class="text-4xl text-white my-5">FriendList</h2>
+
+                <ul id="dropdownsugerenciasamigos" role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+    
+                    <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                    <li class="py-3 sm:py-4 ps-4">
+                        <div class="flex flex-row justify-center align-middle items-center w-full p-2 min-h-max dark:text-white">
+                            <div class="min-w-max z-10 -mr-16"> <!-- img del usuario que hizo el thingo -->
+                                <img class="w-32 h-32 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
+                            </div>
+                            <div class="flex flex-row lg:flex-col-reverse w-full max-h-max p-2 ps-20 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-r-xl">
+                                <div class="flex flex-col lg:flex-row justify-center lg:justify-end align-middle">
+                                    <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                        </svg> 
+                                    </a>
+                                    <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <!-- nickname del usuario -->
+                                    <span class="mb-1 text-xl font-extrabold">Chaddicus Maximus</span>
+                                    <!-- Mensaje -->
+                                    <p class="font-normal text-gray-700 dark:text-gray-400">@chadman34</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </li>
+                </ul>
 
                 <!-- friend -->
                 <div class="flex justify-start items-center w-10/12 my-6" >
@@ -78,7 +104,33 @@
                                 <!-- botón comparar -->
                                 <button type="button" class="bg-[#FEB52A] p-2 m-2"><img src="https://placehold.co/15" alt="iconoComparar"></button>
                                 <!-- botón deleteFriend -->
-                                <button type="button" class="bg-[#FEB52A] p-2 m-2"><img src="https://placehold.co/15" alt="iconoDeleteFriend"></button>
+                                <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="bg-[#FEB52A] p-2 m-2">
+                                    <img src="https://placehold.co/15" alt="iconoDeleteFriend">
+                                </button>
+                                <!-- Pop-up del botón delete Friend -->
+                                <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                                    <div class="relative p-4 w-full max-w-md max-h-full">
+                                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                </svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                            <div class="p-4 md:p-5 text-center">
+                                                <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                                </svg>
+                                                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Quieres eliminar esta persona de tu lista de amigos?</h3>
+                                                <button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                                                    Yes, I'm sure
+                                                </button>
+                                                <button data-modal-hide="popup-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">No, cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -87,7 +139,7 @@
         </div>
 
         <!-- Comparador de estadísticas 1v1 -->
-        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-2/5">
+        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-2/5 h-full">
            
             <!-- perfiles juntos-->
             <div class="flex flex-col w-10/12 rounded-2xl bg-[#3D3564] h-full">
@@ -111,12 +163,32 @@
                 <!-- gráfica a lo jojos (inProgress) -->
                 <div class="">
 
+                    <div role="status" class="w-full h-full  p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700">
+                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2.5"></div>
+                        <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+                        <div class="flex items-baseline mt-4">
+                            <div class="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
+                            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
+                            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
+                            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
+                            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
+                            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
+                            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
+                        </div>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+
+
+                                    
                 </div>
             </div>
 
         </div>
 
     </div>
+
+
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 
 </body>
 </html>
