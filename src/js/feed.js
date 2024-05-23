@@ -38,10 +38,11 @@ const dropdowntrending = document.getElementById('dropdowntrending')
 // Efectos esteticos
 // --------------------
 
-function dropdown(objetivo) {
-    
+function toggleDropdown(objetivo) {
+    objetivo.classList.toggle('max-h-0')
 }
 
 // --------------------
 // Logica
 // --------------------
+
