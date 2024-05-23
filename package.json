@@ -5,15 +5,23 @@
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-scss": "^4.0.9",
-    "tailwindcss": "^3.4.3"
+    "tailwindcss": "^3.4.3",
+    "parcel": "^2.6.2"
   },
   "scripts": {
     "build:tailwind": "postcss ./src/css/style.css -o ./src/output.css",
     "watch:tailwind": "postcss ./src/css/style.css -o ./src/output.css --watch",
-    "watch": "npm-run-all -p watch:tailwind start"
+    "watch": "npm-run-all -p watch:tailwind start",
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html"
   },
   "dependencies": {
+    "@cubejs-client/core": "^0.31.0",
     "chart.js": "^4.4.2",
     "flowbite": "^2.3.0"
   }
+
+
+
+
 }

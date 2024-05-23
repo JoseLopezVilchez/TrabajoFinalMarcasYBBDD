@@ -13,9 +13,9 @@
     </div>
 
     <!-- contenedor para separar el contenido en 2 columnas -->
-    <div class="flex  flex-col w-auto justify-center items-center sm:flex-row  sm:items-start  sm:justify-around ">
+    <div class="flex  flex-col w-auto justify-center items-center sm:flex-row  sm:items-start  sm:justify-center ">
             <!-- info de usuario + lista de amigos -->
-        <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl bg-slate-300       sm:w-2/5 ">
+        <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl bg-slate-300       sm:w-1/5 ">
             <!-- info usuario -->
             <div class="rounded-3xl w-full">
                 <article id="perfilusuario" class="w-full flex flex-col mb-4 rounded-2xl bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -56,7 +56,7 @@
 
             </div>
             <!-- friendlist -->
-            <div class="flex flex-col justify-start items-center w-full rounded-xl bg-[#3D3564] "> 
+            <div class="flex flex-col justify-start items-center w-full rounded-xl bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "> 
 
                 <h2 class="text-4xl text-white my-5">FriendList</h2>
 
@@ -92,54 +92,12 @@
                     </li>
                 </ul>
 
-                <!-- friend -->
-                <div class="flex justify-start items-center w-10/12 my-6" >
-                    <!-- separador para hacer grande la img -->
-                    <div class="flex flex-row justify-center items-center w-full">
-                        <img class="z-10 " src="https://placehold.co/150" alt="">
-                        <div class=" text-lg text-white  w-full h-auto pl-14 -ml-10 border-2 border-yellow-200        sm:text-3xl     ">
-                            <h2>FriendUsername</h2>
-                            <p>@friendNick</p>
-                            <div class="flex flex-row justify-end items-center">
-                                <!-- botón comparar -->
-                                <button type="button" class="bg-[#FEB52A] p-2 m-2"><img src="https://placehold.co/15" alt="iconoComparar"></button>
-                                <!-- botón deleteFriend -->
-                                <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button" class="bg-[#FEB52A] p-2 m-2">
-                                    <img src="https://placehold.co/15" alt="iconoDeleteFriend">
-                                </button>
-                                <!-- Pop-up del botón delete Friend -->
-                                <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                                    <div class="relative p-4 w-full max-w-md max-h-full">
-                                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
-                                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                                </svg>
-                                                <span class="sr-only">Close modal</span>
-                                            </button>
-                                            <div class="p-4 md:p-5 text-center">
-                                                <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                                                </svg>
-                                                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Quieres eliminar esta persona de tu lista de amigos?</h3>
-                                                <button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
-                                                    Yes, I'm sure
-                                                </button>
-                                                <button data-modal-hide="popup-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">No, cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
         <!-- Comparador de estadísticas 1v1 -->
-        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-2/5 h-full">
+        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-1/3">
            
             <!-- perfiles juntos-->
             <div class="flex flex-col w-10/12 rounded-2xl bg-[#3D3564] h-full">
@@ -161,25 +119,9 @@
 
                 </div>
                 <!-- gráfica a lo jojos (inProgress) -->
-                <div class="">
 
-                    <div role="status" class="w-full h-full  p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700">
-                        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2.5"></div>
-                        <div class="w-48 h-2 mb-10 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-                        <div class="flex items-baseline mt-4">
-                            <div class="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
-                            <div class="w-full h-56 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
-                            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
-                            <div class="w-full h-64 ms-6 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
-                            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
-                            <div class="w-full bg-gray-200 rounded-t-lg h-72 ms-6 dark:bg-gray-700"></div>
-                            <div class="w-full bg-gray-200 rounded-t-lg h-80 ms-6 dark:bg-gray-700"></div>
-                        </div>
-                        <span class="sr-only">Loading...</span>
-                    </div>
-
-
-                                    
+                <div>
+                    <canvas id="myChart"></canvas>
                 </div>
             </div>
 
@@ -189,6 +131,8 @@
 
 
     <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./js/profile.js"></script>
 
 </body>
 </html>
