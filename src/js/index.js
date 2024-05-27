@@ -1,4 +1,4 @@
-import { tabregistro , tablogin , login , registro, password, repeatpassword } from "./index/referencias.js"
+import "./index/referencias.js"
 import { toggletablogin , toggletabregistro } from "./index/estetica.js"
 import { loginhandler } from "./index/login.js";
 import { registrohandler } from "./index/registro.js";
@@ -20,8 +20,13 @@ login.addEventListener('submit', (e) => {
 registro.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    if (password.textContent == repeatpassword.textContent) {registrohandler()}
-    else {
+    if (password.value === repeatpassword.value) {
         
+        console.log("hola :D")
+        registrohandler()
+
+    }
+    else {
+        console.log("Blah")
     }
 })

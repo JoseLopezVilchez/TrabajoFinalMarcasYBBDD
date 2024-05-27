@@ -1,12 +1,11 @@
-let url = "http://localhost:3000/api/"
+let url = "http://localhost:3000/api/register"
 
 export function registrohandler() {
 
     const datos = {
-        username : username.textContent,
-        password : password.textContent,
-        repeatpassword : repeatpassword.textContent,
-        email : email.textContent
+        user : username.value,
+        pass : password.value,
+        email : email.value
     }
 
     fetch(url , {
@@ -18,7 +17,7 @@ export function registrohandler() {
     })
     .then(res => {
         if(res){
-            console.log(res.json)
+            console.log(res.json.toString())
             return res.json()
         }else{
             console.log("No ha habido respuesta")

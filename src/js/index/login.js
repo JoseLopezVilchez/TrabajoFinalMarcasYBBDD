@@ -10,12 +10,9 @@ export async function loginhandler() {
         ip = json.ip
     })
 
-    console.log(ip)
- 
-
     const datos = {
-        usuario : usuario.textContent,
-        password : contrasenya.textContent,
+        usuario : usuario.value,
+        password : contrasenya.value,
         device_ip : ip
     }
 
