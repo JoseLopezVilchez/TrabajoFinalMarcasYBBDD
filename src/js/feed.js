@@ -1,5 +1,6 @@
 import "./feed/referencias.js"
 import { toggleDropdown } from "./feed/estetica.js"
+import "./feed/logica.js"
 //{ buttonfeed, buttonporhacer, buttonsugerenciasamigos , buttonsugerenciasthingos, buttontrending, dropdownporhacer, dropdownfeed, dropdownsugerenciasamigos, dropdownsugerenciasthingos, dropdowntrending } from 
 
 document.addEventListener("DOMContentLoaded" , () => {
