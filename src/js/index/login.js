@@ -48,7 +48,7 @@ export async function loginhandler() {
         console.log("Error - navegacion detenida")
     } else {
         //Si tengo un session_id, compruebo si el usuario tiene un perfil completo
-        fetch("http://localhost:3000/api/perfil" , { //TODO - ESTO DA ERROR
+        fetch("http://localhost:3000/api/perfil" , {
 
             method : 'GET',
             headers : {
