@@ -1,6 +1,8 @@
-// --------------------
+// -------------------------------------
+
 // elementos referenciados
-//---------------------
+
+//--------------------------------------
 
 // drawer
 export const formbusqueda = document.getElementById('formbusqueda')
@@ -17,7 +19,7 @@ export const inputaddnombrethingo = document.getElementById('inputaddnombrething
 export const inputaddcategoriathingo = document.getElementById('inputaddcategoriathingo')
 export const buttonaddthingo = document.getElementById('buttonaddthingo')
 
-// contenido
+// dropdowns
 
 export const buttonporhacer = document.getElementById('buttonporhacer')
 export const dropdownporhacer = document.getElementById('dropdownporhacer')
@@ -33,3 +35,15 @@ export const dropdownsugerenciasthingos = document.getElementById('dropdownsuger
 
 export const buttontrending = document.getElementById('buttontrending')
 export const dropdowntrending = document.getElementById('dropdowntrending')
+
+// datos
+
+export const perfilbanner = document.getElementById('perfilbanner')
+export const perfilfoto = document.getElementById('perfilfoto')
+export const perfilnick = document.getElementById('perfilnick')
+export const perfilusername = document.getElementById('perfilusername')
+export const perfilnumverificaciones = document.getElementById('perfilnumverificaciones')
+export const perfilbio = document.getElementById('perfilbio')
+export const perfilnumamigos = document.getElementById('perfilnumamigos')
+export const perfilnumthingos = document.getElementById('perfilnumthingos')
+export const perfilnummentiras = document.getElementById('perfilnummentiras')
