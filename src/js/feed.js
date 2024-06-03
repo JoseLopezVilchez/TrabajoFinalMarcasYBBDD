@@ -1,7 +1,8 @@
 import "./feed/referencias.js"
 import { toggleDropdown } from "./feed/estetica.js"
-import "./feed/logica.js"
-import { infoLoader } from "./feed/logica.js"
+import "./feed/datos.js"
+import { infoLoader, thingoLoader, feedLoader } from "./feed/datos.js"
+import { dropdownfeed, dropdownporhacer, formaddthingo } from "./feed/referencias.js"
 
 //Hago comprobacion de si el perfil esta completo por si alguien
 //accediese via url en vez de a traves de login
@@ -81,4 +82,36 @@ buttontrending.addEventListener('click', () => {
 
 // Carga inicial de datos
 infoLoader()
+
+// Listener para logica de carga por scroll en listado de thingos
+// usa una variable para controlar la paginacion
+let paginathingos = 1
+
+dropdownporhacer.addEventListener('scroll' , () => {
+    if (dropdownporhacer.scrollTop + dropdownporhacer.clientHeight >= dropdownporhacer.scrollHeight) {
+        thingoLoader(paginathingos)
+        paginathingos++
+    }
+})
+
+// Listener para logica de carga por scroll en feed
+// usa una variable para controlar la paginacion
+let paginafeed = 1
+
+dropdownfeed.addEventListener('scroll' , () => {
+    if (dropdownporhacer.scrollTop + dropdownporhacer.clientHeight >= dropdownporhacer.scrollHeight) {
+        feedLoader(paginafeed)
+        paginafeed++
+    }
+})
+
+// ----------------------------
+// envio de datos
+// ----------------------------
+
+formaddthingo.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    
+})
 

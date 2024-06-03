@@ -29,19 +29,19 @@ export function profileLoader() {
     }else{
         console.log("No ha habido respuesta")
     }
-})
+    })
     .then(res => {
-    perfilbanner.style.backgroundImage = res.banner
-    perfilfoto.src = res.imagen_perfil
-    perfilnick.textContent = res.nombre_perfil
-    perfilusername.textContent = res.nombre_usuario
-    perfilbio.textContent = res.bio
+        perfilbanner.style.backgroundImage = res.banner
+        perfilfoto.src = res.imagen_perfil
+        perfilnick.textContent = res.nombre_perfil
+        perfilusername.textContent = res.nombre_usuario
+        perfilbio.textContent = res.bio
 
-    perfilnumverificaciones.textContent = numeralHandler(res.confirmaciones.length)
-    perfilnumamigos.textContent = numeralHandler(res.mutuals.length)
-    perfilnumthingos.textContent = numeralHandler(res.thingos)
-    perfilnummentiras.textContent = numeralHandler(res.mentiras)
-})
+        perfilnumverificaciones.textContent = numeralHandler(res.confirmaciones.length)
+        perfilnumamigos.textContent = numeralHandler(res.mutuals.length)
+        perfilnumthingos.textContent = numeralHandler(res.thingos)
+        perfilnummentiras.textContent = numeralHandler(res.mentiras)
+    })
 }
 
 // Carga los thingos con scrolling
@@ -313,7 +313,7 @@ export function trendingLoader() {
 }
 
 // Convierte numeros a string y miles y millones a letras
-function numeralHandler(numero) {
+export function numeralHandler(numero) {
     let numeroString = ""
 
     if (numero > 999999) {
