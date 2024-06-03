@@ -11,7 +11,6 @@
     <div class="bg-[#3D3564] w-full  h-16 mb-10">
         <img src="" alt="">
     </div>
-
     <!-- contenedor para separar el contenido en 2 columnas -->
     <div class="flex  flex-col w-auto justify-center items-center sm:flex-row  sm:items-start  sm:justify-center ">
             <!-- info de usuario + lista de amigos -->
@@ -53,15 +52,11 @@
                         </div>
                     </div>
                 </article> 
-
             </div>
             <!-- friendlist -->
             <div class="flex flex-col justify-start items-center w-full rounded-xl bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "> 
-
                 <h2 class="text-4xl text-white my-5">FriendList</h2>
-
                 <ul id="dropdownsugerenciasamigos" role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-    
                     <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
                     <li class="py-3 sm:py-4 ps-4">
                         <div class="flex flex-row justify-center align-middle items-center w-full p-2 min-h-max dark:text-white">
@@ -71,14 +66,20 @@
                             <div class="flex flex-row lg:flex-col-reverse w-full max-h-max p-2 ps-20 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-r-xl">
                                 <div class="flex flex-col lg:flex-row justify-center lg:justify-end align-middle">
                                     <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
-                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
-                                        </svg> 
+                                        <button id="buttonCompare" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                            </svg>
+                                        </button>
+                                        
                                     </a>
                                     <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
-                                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
-                                        </svg>
+                                        <button id="buttonDeleteFriend" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                                            </svg>
+                                        </button>
+                                        
                                     </a>
                                 </div>
                                 <div>
@@ -91,16 +92,14 @@
                         </div>
                     </li>
                 </ul>
-
                 
             </div>
         </div>
-
         <!-- Comparador de estadísticas 1v1 -->
         <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-1/3">
-           
+            
             <!-- perfiles juntos-->
-            <div class="flex flex-col w-10/12 rounded-2xl bg-[#3D3564] h-full">
+            <div class="flex flex-col w-10/12 rounded-2xl  bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full">
                 <img src="https://placehold.co/900x200" class="rounded-t-xl" alt="">
                 <!-- img perfil del usuario que compara -->
                 <img src="" alt="">
@@ -117,6 +116,7 @@
                         <p>@nickname</p>
                     </div>
 
+                    
                 </div>
                 <!-- gráfica a lo jojos (inProgress) -->
 

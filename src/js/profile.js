@@ -1,10 +1,12 @@
 
 
-/* Chart de estadisticas, que compara las estadísticas de tu propio perfil con las de tus amigos */
+// import Chart from 'chart.js/auto';
+import {Chart, registerables} from 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.js';
+// import {Chart, registerables} from 'chart.js';
+Chart.register(registerables);
 
-import { Chart } from "chart.js";
-
-const data = {
+(async function() {
+  const data = {
     labels: [
       'Eating',
       'Drinking',
@@ -15,7 +17,7 @@ const data = {
       'Running'
     ],
     datasets: [{
-      label: 'My First Dataset',
+      label: 'Username1',
       data: [65, 59, 90, 81, 56, 55, 40],
       fill: true,
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -25,7 +27,7 @@ const data = {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(255, 99, 132)'
     }, {
-      label: 'My Second Dataset',
+      label: 'Username2',
       data: [28, 48, 40, 19, 96, 27, 100],
       fill: true,
       backgroundColor: 'rgba(54, 162, 235, 0.2)',
@@ -35,18 +37,19 @@ const data = {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(54, 162, 235)'
     }]
-}
+  };
 
- radarCHART = new Chart(
-  document.getElementById('myChart'),{
+  const config = {
     type: 'radar',
-  data: data,
-    options: {
-      elements: {
-        line: {
-          borderWidth: 3
-        }
-      }
-    }
+    data: data,
+    options: { },
+  };
 
-  })
+  new Chart(
+    document.getElementById('myChart'),
+    {
+    config
+    }
+  );
+  
+})();
