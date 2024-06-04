@@ -1,7 +1,7 @@
 
 /* Chart de estadisticas, que compara las estadísticas de tu propio perfil con las de tus amigos */
 
-const { json } = require("express")
+
 
 
 
@@ -15,6 +15,7 @@ const { json } = require("express")
     const confirmaciones = document.getElementById('confirmaciones')
     const mentiras = document.getElementById('mentiras')
     const mutuals = document.getElementById('mutuals')
+    
 
 
 
@@ -48,10 +49,8 @@ const getInfoSesion = () =>{
 
     insanidad = userdata.insanidad
     mutuals.innerHTML = userdata.mutuals.lenght
+    listarMutuals(userdata.mutuals)
 
-    const mutualList = userdata.mutuals
-
-    
   })
 
 }
@@ -80,6 +79,15 @@ const getInfoUsuario = (id) => {
 
 
 
+/** Rellenar los mutuals ¿¿ con un for each ?? */
+
+const listarMutuals =(listaMutuals) =>{
+
+  array.forEach(listaMutuals => {
+    
+  });
+  
+}
 
 
 
@@ -92,13 +100,16 @@ const getInfoUsuario = (id) => {
 
 
 
-var dataUser1 = [1,2,3,4,5,6,7];
+
+
+
+var dataUser1 = [1,2,5,4,5,6,7];
 var dataUser2 = [7,6,5,4,3,2,1];
 
 
 const labelsStats = ['Actividades','Insanidad','Seguidores','Mutuals','Siguiendo','Mentiras','Confirmaciones'];
 
-var marksCanvas = document.getElementById("myChart");
+var Canvas = document.getElementById("myChart");
 
 const comparatorData = {
   labels: labelsStats,
@@ -113,7 +124,7 @@ const comparatorData = {
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgb(255, 99, 132)'
   }, {
-    label: 'UserName2',
+    label: 'UserName 2',
     data: dataUser2,
     fill: true,
     backgroundColor: 'rgba(54, 162, 235, 0.2)',
@@ -126,7 +137,7 @@ const comparatorData = {
 };
 
 
-var radarChart = new Chart(marksCanvas, {
+var radarChart = new Chart(Canvas, {
   type: 'radar',
   data: comparatorData
 });
