@@ -2,7 +2,6 @@ import "./feed/referencias.js"
 import { toggleDropdown } from "./feed/estetica.js"
 import "./feed/datos.js"
 import { infoLoader, thingoLoader, feedLoader } from "./feed/datos.js"
-import { dropdownfeed, dropdownporhacer, formaddthingo } from "./feed/referencias.js"
 
 //Hago comprobacion de si el perfil esta completo por si alguien
 //accediese via url en vez de a traves de login

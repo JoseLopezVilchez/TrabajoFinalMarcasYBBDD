@@ -44,7 +44,7 @@ export async function loginhandler() {
     })
 
     // Compruebo si he conseguido un session_id
-    if (sessionStorage.getItem("session_id") === null || sessionStorage.getItem("session_id").toString() === "") {
+    if (sessionStorage.getItem("session_id") === null) {
         console.log("Error - navegacion detenida")
     } else {
         //Si tengo un session_id, compruebo si el usuario tiene un perfil completo
