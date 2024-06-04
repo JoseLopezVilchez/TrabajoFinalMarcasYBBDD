@@ -2,9 +2,6 @@
 /* Chart de estadisticas, que compara las estadísticas de tu propio perfil con las de tus amigos */
 
 
-
-
-
 // Asignar variables a las ID del HTML
     const nombre_usuario = document.getElementById('nombre_usuario')
     const nombre_perfil = document.getElementById('nombre_perfil')
@@ -32,7 +29,7 @@ const getInfoSesion = () =>{
       return res.json()
     }else{
       throw new Error('Error en la petición')
-   }
+  }
   }).then( json =>{
     console.log(json)
 
