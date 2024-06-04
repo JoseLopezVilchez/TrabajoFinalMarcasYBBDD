@@ -21,6 +21,7 @@
     "express": "^4.19.2",
     "flowbite": "^2.3.0"
   },
+  "type": "module",
   "name": "trabajofinalmarcasybbdd",
   "version": "1.0.0",
   "main": "postcss.config.js",
