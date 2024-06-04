@@ -70,14 +70,28 @@ function getInfoUsuario(id){
 } 
 
 
-
+// --------------------------------------
 /** Rellenar los mutuals ¿¿ con un for each ?? */
 
 const listarMutuals = (listaMutuals) =>{
 
   for(let mutual of listaMutuals){
 
-    getInfoUsuario(mutual.id).then
+    var mutualData = getInfoUsuario(mutual.id)
+
+    var chartData = Array<Int>[
+      parseInt( mutualData.thingos, 10),
+      parseInt(mutualData.insanidad,10),
+      parseInt(mutualData.seguidores,10),
+      parseInt(mutualData.mutuals.lenght,10),
+      parseInt(mutualData.seguidos,10),
+      parseInt(userdata.mentiras, 10),
+      parseInt(userdata.confirmaciones.lenght, 10)
+    ]
+
+
+    // el listener pa los botones 
+    
 
   }
 }
