@@ -1156,6 +1156,10 @@ input[type="range"]::-ms-fill-lower {
   height: 100vh;
 }
 
+.max-h-0 {
+  max-height: 0px;
+}
+
 .max-h-max {
   max-height: -moz-max-content;
   max-height: max-content;
@@ -1375,6 +1379,10 @@ input[type="range"]::-ms-fill-lower {
   align-self: center;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .\!overflow-visible {
   overflow: visible !important;
 }
@@ -1504,6 +1512,11 @@ input[type="range"]::-ms-fill-lower {
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
 .border-transparent {
@@ -1817,6 +1830,12 @@ input[type="range"]::-ms-fill-lower {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1835,6 +1854,10 @@ input[type="range"]::-ms-fill-lower {
 
 .duration-75 {
   transition-duration: 75ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:border-gray-300:hover {
@@ -1919,6 +1942,14 @@ input[type="range"]::-ms-fill-lower {
 }
 
 @media (min-width: 640px) {
+  .sm\:z-0 {
+    z-index: 0;
+  }
+
+  .sm\:z-30 {
+    z-index: 30;
+  }
+
   .sm\:mx-2 {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -1973,9 +2004,9 @@ input[type="range"]::-ms-fill-lower {
     border-radius: 0.5rem;
   }
 
-  .sm\:rounded-r-lg {
-    border-top-right-radius: 0.5rem;
+  .sm\:rounded-b-lg {
     border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
 
   .sm\:p-6 {
@@ -2031,6 +2062,11 @@ input[type="range"]::-ms-fill-lower {
   .dark\:border-blue-500 {
     --tw-border-opacity: 1;
     border-color: rgb(63 131 248 / var(--tw-border-opacity));
+  }
+
+  .dark\:border-gray-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity));
   }
 
   .dark\:border-gray-500 {

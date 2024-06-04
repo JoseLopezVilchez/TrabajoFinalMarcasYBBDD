@@ -1,22 +1,15 @@
 
-/* Chart de estadisticas, que compara las estadísticas de tu propio perfil con las de tus amigos */
+import * as htmlRef from './references.js'
 
 
 // Asignar variables a las ID del HTML
-    const nombre_usuario = document.getElementById('nombre_usuario')
-    const nombre_perfil = document.getElementById('nombre_perfil')
-    const imagen_perfil = document.getElementById('imagen_perfil')
-    const banner = document.getElementById('banner')
-    const bio = document.getElementById('bio')
-    const thingos = document.getElementById('thingos')
-    const confirmaciones = document.getElementById('confirmaciones')
-    const mentiras = document.getElementById('mentiras')
-    const mutuals = document.getElementById('mutuals')
-    
 
 
 
-/** Conseguir la info del usuario que ha iniciado sesión. */
+
+/** Conseguir la info del usuario que ha iniciado sesión.
+ * esto se hace mandando la session ID en el heades
+ * dicha id se consigue al iniciar sesión  */
 const getInfoSesion = () =>{
 
   fetch("http://localhost:3000/api/perfil",{
@@ -24,38 +17,41 @@ const getInfoSesion = () =>{
   headers:{
       "session_id" : sessionStorage.getItem("session_id")
   }
-  }).then(res => {
+  }).then(function(res) {
     if(res){
       return res.json()
     }else{
       throw new Error('Error en la petición')
   }
-  }).then( json =>{
-    console.log(json)
+  }).then(function(userdata) {
 
-    const userdata = res.data;
+    // console.log(userdata)
 
-    nombre_usuario.innerHTML = userdata.nombre_usuario
-    nombre_perfil.innerHTML = userdata.nombre_perfil
-    imagen_perfil.innerHTML.src = userdata.imagen_perfil
-    banner
-    bio.innerHTML = userdata.bio
-    thingos.innerHTML = userdata.thingos
-    confirmaciones.innerHTML = userdata.confirmaciones.lenght
-    mentiras.innerHTML = userdata.mentiras
+    htmlRef.nombre_usuario.textContent = userdata.nombre_usuario
+    htmlRef.nombre_perfil.textContent = userdata.nombre_perfil
+    htmlRef.imagen_perfil.textContent.src = userdata.imagen_perfil
+    htmlRef.banner.style.bacgroundImage = `url(${userdata.banner})`
+    htmlRef.bio.textContent =  userdata.bio
+    htmlRef.thingos.textContent = parseInt( userdata.thingos, 10)
+    htmlRef.confirmaciones.textContent = parseInt(userdata.confirmaciones.lenght, 10)
+    htmlRef.mentiras.textContent = parseInt(userdata.mentiras, 10)
+    htmlRef.mutuals.textContent = parseInt(userdata.mutuals.lenght,10)  
+    
 
-    insanidad = userdata.insanidad
-    mutuals.innerHTML = userdata.mutuals.lenght
-    listarMutuals(userdata.mutuals)
-
+    /** Aqui guardo la lista de mutuals para usarla más tarde */
+    sessionStorage.setItem("mutual_list", userdata.mutuals)
+    
   })
+    
+
+  
 
 }
 
 
 
 /** Obtener la info de un usuario sabiendo su id. La id debo obtenerla de las id de los mutuals del usuario */
-const getInfoUsuario = (id) => {
+function getInfoUsuario(id){
 
   let url = `http://localhost:3000/api/perfil/${id}`;
 
@@ -71,21 +67,20 @@ const getInfoUsuario = (id) => {
   }).then(json =>{
     console.log(json)
   })
-
 } 
 
 
 
 /** Rellenar los mutuals ¿¿ con un for each ?? */
 
-const listarMutuals =(listaMutuals) =>{
+const listarMutuals = (listaMutuals) =>{
 
-  array.forEach(listaMutuals => {
-    
-  });
-  
+  for(let mutual of listaMutuals){
+
+    getInfoUsuario(mutual.id).then
+
+  }
 }
-
 
 
 
@@ -141,3 +136,5 @@ var radarChart = new Chart(Canvas, {
 
 
 getInfoSesion()
+const lista = sessionStorage.getItem('mutuals_list')
+listarMutuals(lista)
