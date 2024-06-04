@@ -5,6 +5,18 @@ const { json } = require("express")
 
 
 
+// Asignar variables a las ID del HTML
+    const nombre_usuario = document.getElementById('nombre_usuario')
+    const nombre_perfil = document.getElementById('nombre_perfil')
+    const imagen_perfil = document.getElementById('imagen_perfil')
+    const banner = document.getElementById('banner')
+    const bio = document.getElementById('bio')
+    const thingos = document.getElementById('thingos')
+    const confirmaciones = document.getElementById('confirmaciones')
+    const mentiras = document.getElementById('mentiras')
+    const mutuals = document.getElementById('mutuals')
+
+
 
 /** Conseguir la info del usuario que ha iniciado sesión. */
 const getInfoSesion = () =>{
@@ -25,38 +37,19 @@ const getInfoSesion = () =>{
 
     const userdata = res.data;
 
-    getElement('nombre_usuario').innerHTML = userdata.nombre_usuario
-    getElement('nombre_perfil').innerHTML = "@"+userdata.nombre_perfil
-    getElement('imagen_perfil').innerHTML.src
-    const imagen_perfil = userdata.nombre_perfil
-    const banner = userdata.banner
-    const bio = userdata.bio
-    const thingos = userdata.thingos
-    const confirmaciones = userdata.confirmaciones.lenght
-    const mentiras = userdata.mentiras
-    const insanidad = userdata.insanidad
-    const mutuals = userdata.mutuals.lenght
+    nombre_usuario.innerHTML = userdata.nombre_usuario
+    nombre_perfil.innerHTML = userdata.nombre_perfil
+    imagen_perfil.innerHTML.src = userdata.imagen_perfil
+    banner
+    bio.innerHTML = userdata.bio
+    thingos.innerHTML = userdata.thingos
+    confirmaciones.innerHTML = userdata.confirmaciones.lenght
+    mentiras.innerHTML = userdata.mentiras
 
-    // console.log(nombre_usuario)
-    // console.log(imagen_perfil)
-    // console.log(banner)
-    // console.log(bio)
-    // console.log(thingos)
-    // console.log(confirmaciones)
-    // console.log(mentiras)
-    // console.log(insanidad)
-    // console.log(mutuals)
+    insanidad = userdata.insanidad
+    mutuals.innerHTML = userdata.mutuals.lenght
 
-
-    
-
-
-
-
-    
-
-
-
+    const mutualList = userdata.mutuals
 
     
   })
@@ -139,3 +132,4 @@ var radarChart = new Chart(marksCanvas, {
 });
 
 
+getInfoSesion()
