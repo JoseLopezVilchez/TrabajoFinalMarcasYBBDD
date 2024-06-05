@@ -36,9 +36,9 @@ fetch("http://localhost:3000/api/perfil" , {
 // Si el usuario tiene session_id, no esta vacia, y su perfil esta hecho, se queda en feed
 // De lo contrario, lo manda a perfil
 
-/*if (sessionStorage.getItem("session_id") === null || sessionStorage.getItem("session_id") === "" || comprobador) {
+if (sessionStorage.getItem("session_id") === null || sessionStorage.getItem("session_id") === "" || comprobador) {
     window.location.href = "http://127.0.0.1:5500/src/profile.html"
-}*/
+}
 
 // -----------------------------------
 // Funciones esteticas
