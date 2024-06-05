@@ -38,6 +38,7 @@ export async function loginhandler() {
         if (res) {
             // Recibo un session_id, el cual almaceno para mas tarde
             sessionStorage.setItem("session_id" , res.session_id)
+            console.log('res')
         } else {
             console.log("Error - session id vacio")
         }
