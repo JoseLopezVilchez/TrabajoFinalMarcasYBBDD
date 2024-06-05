@@ -15,7 +15,6 @@ fetch("http://localhost:3000/api/perfil" , {
     })
 .then(res => {
     if(res){
-        console.log(res.json)
         return res.json()
     }else{
         console.log("No ha habido respuesta")
@@ -113,4 +112,3 @@ formaddthingo.addEventListener('submit', (e) => {
 
     
 })
-
