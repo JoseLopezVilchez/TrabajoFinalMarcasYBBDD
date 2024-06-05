@@ -38,7 +38,6 @@ export async function loginhandler() {
         if (res) {
             // Recibo un session_id, el cual almaceno para mas tarde
             sessionStorage.setItem("session_id" , res.session_id)
-            console.log('res')
         } else {
             console.log("Error - session id vacio")
         }
@@ -74,10 +73,11 @@ export async function loginhandler() {
                 res.bio !== null && res.bio !== ""
             ) {
                 // Si el perfil esta completo, lo mando a la pagina de feed
-                window.location.href = "http://127.0.0.1:5500/src/feed.html"
+                window.location.href = "http://127.0.0.1:5500/src/profile.html"
+                
             } else {
                 // Si el perfil esta incompleto, lo mando a perfil para que lo rellene
-                window.location.href = "http://127.0.0.1:5500/src/profile.html"
+                window.location.href = "http://127.0.0.1:5500/src/feed.html"
             }
         })
     }

@@ -6,7 +6,7 @@
     <title>Profile</title>
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="bg-gradient-to-br from- from-slate-900 from-10% via-purple-800 via-70% to-blue-800 to-90%">
+<body class="bg-gradient-to-br from- from-slate-900 from-10% via-purple-800 via-70% to-blue-800 to-90%  h-full w-full">
     
 
     <header class="fixed w-full z-20 sm:z-0">
@@ -44,7 +44,7 @@
             <div class="py-4 overflow-y-auto overflow-x-visible">
     
                 <ul class="space-y-2 font-medium mb-4 overflow-x-visible">
-                   <li> <!-- cada <li> es un elemento del drawer -->
+                    <li> <!-- cada <li> es un elemento del drawer -->
                         <form id="formbusqueda" class="max-w-lg mx-auto flex">
                             <div class="relative w-full">
                                 <input id="inputbusqueda" type="search" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Buscar nombre de usuario" required />
@@ -55,8 +55,8 @@
                                 </button>
                             </div>
                         </form>
-                   </li>
-                   <li class="!overflow-visible">
+                    </li>
+                    <li class="!overflow-visible">
                         <!-- controlador de popover -->
                         <div data-popover-target="popover" data-popover-placement="right" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -64,33 +64,33 @@
                             </svg>
                             <span class="ms-3">Añadir thingo</span>
                         </div>
-                   </li>
+                    </li>
                 </ul>
     
                 <ul class="space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"> <!-- aqui van redirecciones a cada pagina -->
                     <li>
-                        <a id="linkfeed" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
-                           <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                              <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                              <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-                           </svg>
-                           <span class="ms-3">Feed</span>
+                        <a id="linkfeed" href="http://127.0.0.1:5500/src/feed.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
+                            <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                                <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
+                                <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
+                            </svg>
+                            <span class="ms-3">Feed</span>
                         </a>
                     </li>
                     <li>
                         <a id="linkperfil" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
-                           <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                              <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
-                           </svg>
-                           <span class="flex-1 ms-3 whitespace-nowrap">Perfil</span>
+                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                                <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Perfil</span>
                         </a>
                     </li>
                     <li>
-                        <a id="linklogout" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
-                           <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
-                           </svg>
-                           <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
+                        <a id="linklogout" href="http://127.0.0.1:5500/src/index.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
+                            <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
+                            </svg>
+                            <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
                         </a>
                     </li>
                 </ul>
@@ -127,7 +127,7 @@
     <!-- contenedor para separar el contenido en 2 columnas -->
     <div class="flex  flex-col w-auto justify-center items-center sm:flex-row  sm:items-start  sm:justify-center ">
             <!-- info de usuario + lista de amigos -->
-        <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl bg-slate-300       sm:w-1/5 ">
+        <div class="flex flex-col place-items-center w-full px-2 py-5 rounded-xl     sm:w-1/5 ">
             <!-- info usuario -->
             <div class="rounded-3xl w-full">
                 <article id="perfilusuario" class="w-full flex flex-col mb-4 rounded-2xl bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -136,7 +136,7 @@
                         <div class="flex flex-row justify-start">
                             <a class="cursor-pointer"><img id="imagen_perfil" class="w-20 h-20 rounded-full -translate-y-1/2 mr-6" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg" alt=""></a>
                             <dl class="flex flex-col text-gray-900 dark:text-white pt-2">
-                                <a id="nombre_usuario" class="cursor-pointer"><dt class="mb-2 text-xl font-extrabold">Chaddicus Maximus</dt></a>
+                                <a  class="cursor-pointer"><dt id="nombre_usuario" class="mb-2 text-xl font-extrabold">Chaddicus Maximus</dt></a>
                                 <dd id="nombre_perfil" class="text-gray-500 dark:text-gray-400">@chadman34</dd>
                             </dl>
                             <div class="w-2/4 flex flex-row justify-end">
@@ -181,7 +181,7 @@
                     <li id="tbody" class="py-3 sm:py-4 ps-4">
                         <div class="flex flex-row justify-center align-middle items-center w-full p-2 min-h-max dark:text-white">
                             <div class="min-w-max z-10 -mr-16">
-                                 <!-- img del amigo -->
+                                <!-- img del amigo -->
                                 <img class="w-32 h-32 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
                             </div>
                             <div class="flex flex-row lg:flex-col-reverse w-full max-h-max p-2 ps-20 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-r-xl">
@@ -195,7 +195,7 @@
                                         
                                     </a>
                                     <a class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
-                                        <button id="buttonDeleteFriend" data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
+                                        <button  data-modal-target="popup-modal" data-modal-toggle="popup-modal" class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
                                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
                                             </svg>
@@ -215,7 +215,7 @@
                                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                                                         </svg>
                                                         <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">¿Quieres eliminar a #nombreAmigo de tu lista de amistades?</h3>
-                                                        <button data-modal-hide="popup-modal" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                                                        <button id="buttonDeleteFriend" data-modal-hide="popup-modal" type="button" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
                                                             ELIMINAR
                                                         </button>
                                                         <button data-modal-hide="popup-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancelar</button>
@@ -240,24 +240,27 @@
             </div>
         </div>
         <!-- Comparador de estadísticas 1v1 -->
-        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl bg-slate-300  sm:w-1/3">
+        <div class=" flex flex-col items-center px-2 py-5 w-full rounded-xl  sm:w-1/3">
             
             <!-- interior-->
             <div class="flex flex-col w-10/12 rounded-2xl  bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-full">
-                <div id="banner" style="background-image: url(https://images.alphacoders.com/464/464282.jpg);" class="bg-center bg-no-repeat bg-cover rounded-t-2xl  w-full  h-32"></div>
+                <div id="bannerComparador" style="background-image: url(https://images.alphacoders.com/464/464282.jpg);" class="bg-center bg-no-repeat bg-cover rounded-t-2xl  w-full  h-32"></div>
         
                 <!-- iconos de los 2 usuarios  -->
                 <div class="flex flex-row justify-evenly mt-20">
                     <!-- perfil del que compara -->
                     <div class="flex flex-col place-items-center">
-                        <img class="w-36 h-36 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
+                        <img id="imagenComparador" class="w-36 h-36 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
                         <p class="text-gray-700 dark:text-gray-400">@nickname</p>
                     </div>
-                    <!-- perfil del comparado -->
-                    <div class="flex flex-col place-items-center">
-                        <img class="w-36 h-36 rounded-full z-10" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
-                        <p class="text-gray-700 dark:text-gray-400">@nickname</p>
+                    <!-- perfil del comparado Esto se añade al click listener para que se mantenga oculto -->
+                    <div id="comparadoRellenar" class="w-auto hidden   ">
+                        <div class="flex flex-col place-items-center">
+                            <img id="img_comparado" class="w-36 h-36 rounded-full z-10" src="">
+                            <p id="nombre_comparado" class="text-gray-700 dark:text-gray-400">nombre</p>
+                        </div>
                     </div>
+                    
 
                     
                 </div>
