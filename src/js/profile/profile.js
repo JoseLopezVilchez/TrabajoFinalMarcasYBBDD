@@ -82,15 +82,10 @@ const getInfoSesion = () => {
       parseInt(userdata.confirmaciones.lenght, 10)
     ]
 
-
     /** esta lista de mutuals se usará más tarde para montar la friendList */
      listaMutuals = userdata.mutuals
 
   })
-
-
-
-
 }
 
 
@@ -215,10 +210,6 @@ function bttnDeleteFrend(mutual){
 
 
 
-
-
-
-
 function newChart(){
   const dataComparada ={
     labels: htmlRef.labelsStats,
@@ -252,7 +243,6 @@ function newChart(){
 
 
 }
-
 
 
 const comparatorData = {
