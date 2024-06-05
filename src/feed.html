@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="flex w-screen h-wh bg-center bg-no-repeat bg-fixed bg-gradient-to-br from- from-slate-900 from-10% via-purple-800 via-70% to-blue-800 to-90%"><div class="flex flex-col w-max h-screen mx-auto">
+    
+    <!-- Contenido de la pagina. Se ponen en columna en tamanyo movil, en tablet se deben dividir en dos columnas, y por encima de eso la segunda se subdivide -->
+    <!-- TODO hay que integrar cada apartado como un desplegable de cara a los moviles -->
+    <div class="flex flex-col sm:flex-row justify-center mt-2">
+
+        <div class="w-full sm:max-w-lg flex justify-start flex-col sm:mx-2"> <!-- columna A -->
+
+            <!-- Perfil -->
+            <article id="perfilusuario" class="w-full flex flex-col mb-4 bg-white border border-gray-200 sm:rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <div id="perfilbanner" style="background-image: url(https://images.alphacoders.com/464/464282.jpg);" class="bg-center bg-no-repeat bg-cover w-full h-32"></div>
+                <div class="pl-6 pr-6 pb-6 flex flex-col">
+                    <div class="flex flex-row justify-start">
+                        <a class="cursor-pointer"><img id="perfilfoto" class="w-20 h-20 rounded-full -translate-y-1/2 mr-6" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg" alt=""></a>
+                        <dl class="flex flex-col text-gray-900 dark:text-white pt-2">
+                            <a class="cursor-pointer"><dt id="perfilnick" class="mb-2 text-xl font-extrabold">Chaddicus Maximus</dt></a>
+                            <dd id="perfilusername" class="text-gray-500 dark:text-gray-400">@chadman34</dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <p id="perfilbio" class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                    </div>
+                    <div>
+                        <dl class="flex justify-between text-gray-900 dark:text-white">
+                            <div class="flex flex-col items-center justify-center">
+                                <a class="cursor-pointer"><dt id="perfilnumamigos" class="mb-2 text-xl font-extrabold">73M+</dt></a>
+                                <dd class="text-gray-500 dark:text-gray-400">Amigos</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <a class="cursor-pointer"><dt id="perfilnumthingos" class="mb-2 text-xl font-extrabold">100M+</dt></a>
+                                <dd class="text-gray-500 dark:text-gray-400">Actividades</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <a class="cursor-pointer"><dt id="perfilnummentiras" class="mb-2 text-xl font-extrabold">1000s</dt></a>
+                                <dd class="text-gray-500 dark:text-gray-400">Mentiras</dd>
+                            </div>
+                            <div class="flex flex-col items-center justify-center">
+                                <a class="cursor-pointer"><dt id="perfilnumverificaciones" class="mb-2 text-xl font-extrabold">1B+</dt></a>
+                                <dd class="text-gray-500 dark:text-gray-400">Verificados</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </article> <!-- ----------------------------- -->
+
+            <!-- Thingos -->
+            <article id="listaactividades">
+
+                <div class="flex flex-col w-full p-4 mb-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex flex-row justify-between mb-4 items-center">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Thingos por hacer</h5>
+                        </div>
+                        <div>
+                            <button id="buttonporhacer" class="sm:z-30 flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-root">
+                        <ul id="dropdownporhacer" role="list" class="max-h-0 transition-all ease-in-out overflow-hidden divide-y divide-gray-200 dark:divide-gray-700">
+
+                            <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                            <li id="porhacerentrada0" class="py-3 sm:py-4 ps-4 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-xl">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0"> <!-- hay que meter img de categoria aqui -->
+                                        <img class="w-8 h-8 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F03%2F09%2F335092-Penguins_of_Madagascar-cartoon-movies.jpg&f=1&nofb=1&ipt=edb7643656eecc76e5d889f11f5b45dfe88a3d8ccf46f84b9611f2384e045fdd&ipo=images">
+                                    </div>
+                                    <div class="flex-1 min-w-0 ms-4">
+                                        <!-- nombre thingo -->
+                                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                            Pingüinismo
+                                        </p>
+                                        <!-- nombre categoria -->
+                                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                            Deportes
+                                        </p>
+                                    </div>
+
+                                    <div class="inline-flex items-center"> <!-- contenedor botones -->
+                                        <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                            </svg>
+                                        </a>
+                                        <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article> <!-- ---------------------------- -->
+        </div>
+
+        <div class="w-full sm:max-w-lg md:max-w-full flex flex-col xl:flex-row justify-start sm:mx-2"> <!-- columna B (subdividida) -->
+
+            <!-- Feed -->
+            <article id="feed" class="w-full sm:max-w-lg flex flex-col sm:mr-4">
+
+                <div class="w-full p-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mb-4">
+                    
+                    <div class="flex flex-row justify-between mb-4 items-center">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Feed</h5>
+                        </div>
+                        <button id="buttonfeed" class="sm:z-30 flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                            <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="flow-root">
+                        <ul id="dropdownfeed" role="list" class="max-h-0 transition-all ease-in-out overflow-hidden divide-y divide-gray-200 dark:divide-gray-700">
+
+                            <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                            <li class="py-3 sm:py-4">
+                                <div class=""> <!-- ejemplo de entrada del feed -->
+                                    <div class="flex items-center space-x-2 rtl:space-x-reverse"> <!-- fecha del thingo -->
+                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">08 / 11 / 2024</span>
+                                    </div>
+                                    <div class="flex flex-col justify-between w-full leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+                
+                                        <div class="w-full dark:text-white flex justify-start">
+                                            <div class="min-w-max"> <!-- img del usuario que hizo el thingo -->
+                                                <img class="w-20 h-20 rounded-full mr-6" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
+                                            </div>
+                                            <div class="flex flex-col justify-between">
+                                                <div><!-- nickname del usuario -->
+                                                    <span class="mb-2 text-xl font-extrabold">Chaddicus Maximus</span>
+                                                    <!-- Mensaje -->
+                                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Ha hecho pingüinismo</p>
+                                                </div>
+                                                <span class="mb-2 text-xl font-extrabold text-red-600">Y tu no</span>
+                                            </div> 
+                                        </div>
+                    
+                                        <div class="flex justify-between">
+                                            <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                                </svg> 
+                                            </a>
+                                            <div>
+                                                <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8.597 3.2A1 1 0 0 0 7.04 4.289a3.49 3.49 0 0 1 .057 1.795 3.448 3.448 0 0 1-.84 1.575.999.999 0 0 0-.077.094c-.596.817-3.96 5.6-.941 10.762l.03.049a7.73 7.73 0 0 0 2.917 2.602 7.617 7.617 0 0 0 3.772.829 8.06 8.06 0 0 0 3.986-.975 8.185 8.185 0 0 0 3.04-2.864c1.301-2.2 1.184-4.556.588-6.441-.583-1.848-1.68-3.414-2.607-4.102a1 1 0 0 0-1.594.757c-.067 1.431-.363 2.551-.794 3.431-.222-2.407-1.127-4.196-2.224-5.524-1.147-1.39-2.564-2.3-3.323-2.788a8.487 8.487 0 0 1-.432-.287Z"/>
+                                                    </svg>
+                                                </a>
+                                                <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M11.4401 2.24219C9.2088 2.24219 7.16896 3.50383 5.6563 5.62188C5.41732 5.95547 5.19255 6.31094 4.9831 6.68828C5.03943 6.79766 5.09521 6.90703 5.15044 7.02187C5.69458 8.16484 6.24474 9.5375 5.77114 10.6859C5.57974 11.1453 5.192 11.4352 4.79169 11.6156C4.39193 11.7906 3.96153 11.8672 3.56669 11.8672C3.48685 11.8672 3.40482 11.8617 3.32278 11.8562C3.232 12.5508 3.18442 13.2672 3.18442 14C3.18442 17.2867 4.14091 20.2563 5.6563 22.3781C7.16896 24.4945 9.2088 25.7578 11.4401 25.7578C13.6713 25.7578 15.7111 24.4945 17.226 22.3781C17.7783 21.6016 18.2541 20.7156 18.6369 19.7422H11.4401V18.7578H26.3151C27.4088 18.7578 27.4088 16.2422 26.3151 16.2422H11.4401V15.2578H19.6486C19.6815 14.8477 19.6979 14.4266 19.6979 14C19.6979 10.7133 18.7408 7.74375 17.226 5.62188C15.7111 3.50383 13.6713 2.24219 11.4401 2.24219ZM3.56724 6.16875C3.36161 6.50781 3.10896 6.95078 2.87216 7.44844C2.3663 8.50391 2.04255 9.75625 2.27224 10.3141C2.3313 10.4563 2.49099 10.6039 2.74036 10.7133C2.98974 10.8227 3.30966 10.8828 3.56724 10.8828C3.82482 10.8828 4.14474 10.8227 4.39411 10.7133C4.64403 10.6039 4.80318 10.4563 4.86278 10.3141C5.09193 9.75625 4.76818 8.50391 4.26286 7.44844C4.02552 6.95078 3.77286 6.50781 3.56724 6.16875ZM7.94005 11.7578C8.68927 11.7578 9.30724 12.3758 9.30724 13.125C9.30724 13.8742 8.68927 14.4922 7.94005 14.4922C7.19083 14.4922 6.57286 13.8742 6.57286 13.125C6.57286 12.3758 7.19083 11.7578 7.94005 11.7578ZM14.9401 11.7578C15.6893 11.7578 16.3072 12.3758 16.3072 13.125C16.3072 13.8742 15.6893 14.4922 14.9401 14.4922C14.1908 14.4922 13.5729 13.8742 13.5729 13.125C13.5729 12.3758 14.1908 11.7578 14.9401 11.7578ZM11.4401 20.9453C12.0252 20.9453 12.5611 21.1203 12.9713 21.4266C13.3869 21.7383 13.6822 22.2086 13.6822 22.75C13.6822 23.2914 13.3869 23.7617 12.9713 24.0734C12.5611 24.3797 12.0252 24.5547 11.4401 24.5547C10.8549 24.5547 10.319 24.3797 9.9088 24.0734C9.49318 23.7617 9.19786 23.2914 9.19786 22.75C9.19786 22.2086 9.49318 21.7383 9.9088 21.4266C10.319 21.1203 10.8549 20.9453 11.4401 20.9453Z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </article> <!-- -------------------------- -->
+
+            <div class="w-full sm:max-w-lg justify-start">
+                <!-- Sugerencias amigos -->
+                <article id="sugerenciaamigos">
+
+                    <div class="w-full p-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mb-4">
+                        
+                        <div class="flex flex-row justify-between mb-4 items-center">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Sugerencias de amigos</h5>
+                            </div>
+                            <div class="sm:z-30">
+                                <button id="buttonsugerenciasamigos" class="sm:z-30 flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flow-root">
+                            <ul id="dropdownsugerenciasamigos" role="list" class="max-h-0 transition-all ease-in-out overflow-hidden divide-y divide-gray-200 dark:divide-gray-700">
+    
+                                <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                                <li class="py-3 sm:py-4 ps-4">
+                                    <div class="flex flex-row justify-center align-middle items-center w-full p-2 min-h-max dark:text-white">
+
+                                        <div class="min-w-max z-10 -mr-16">
+                                            <img class="w-32 h-32 rounded-full" src="https://smswsf.wordpress.com/wp-content/uploads/2012/05/the-laughing-clown.jpg">
+                                        </div>
+                                        <div class="flex flex-row lg:flex-col-reverse w-full max-h-max p-2 ps-20 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-r-xl">
+                                            <div class="flex flex-col lg:flex-row justify-center lg:justify-end align-middle">
+                                                <a onclick="" class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                                    </svg> 
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <!-- nickname del usuario -->
+                                                <span class="mb-1 text-xl font-extrabold">Chaddicus Maximus</span>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sugerencias thingos -->
+                <article id="sugerenciathingos">
+                    <div class="w-full p-4 mb-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        
+                        <div class="flex flex-row justify-between mb-4 items-center">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Sugerencias de thingos</h5>
+                            </div>
+                            <div>
+                                <button id="buttonsugerenciasthingos" class="sm:z-30 flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flow-root">
+                            <ul id="dropdownsugerenciasthingos" role="list" class="max-h-0 transition-all ease-in-out overflow-hidden divide-y divide-gray-200 dark:divide-gray-700">
+    
+                                <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                                <li class="mb-2 py-3 sm:py-4 ps-4 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-xl">
+                                    <div class="flex flex-col">
+                                        <div class="flex flex-row mb-4">
+                                            <div class=""> <!-- hay que meter img de categoria aqui -->
+                                                <img class="w-8 h-8 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F03%2F09%2F335092-Penguins_of_Madagascar-cartoon-movies.jpg&f=1&nofb=1&ipt=edb7643656eecc76e5d889f11f5b45dfe88a3d8ccf46f84b9611f2384e045fdd&ipo=images">
+                                            </div>
+                                            <div class="flex flex-col ms-4">
+                                                <!-- nombre thingo -->
+                                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                                    Pingüinismo
+                                                </p>
+                                                <!-- nombre categoria -->
+                                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                                    Deportes
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex flex-row justify-between">
+                                            <div>
+                                                <p class="font-normal text-gray-700 dark:text-gray-400">Hecho por</p>
+                                                <span class="mb-2 text-xl font-extrabold text-gray-700 dark:text-white">Chaddicus Maximus</span>
+                                            </div>
+                                            
+                                            <div class="inline-flex items-end"> <!-- contenedor botones -->
+                                                <a onclick="" class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                                    </svg> 
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Trending -->
+                <article id="trending">
+                    <div class="w-full p-4 mb-4 bg-white border border-gray-200 sm:rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        
+                        <div class="flex flex-row justify-between mb-4 items-center">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Trending</h5>
+                            </div>
+                            <div>
+                                <button id="buttontrending" class="sm:z-30 flex items-center p-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                                    <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flow-root">
+                            <ul id="dropdowntrending" role="list" class="max-h-0 transition-all ease-in-out overflow-hidden divide-y divide-gray-200 dark:divide-gray-700">
+    
+                                <!-- Cada <li> se debe meter programaticamente. Este es un ejemplo -->
+                                <li class="py-3 sm:py-4 ps-4 bg-gray-100 dark:bg-gray-700 border-gray-200 rounded-xl">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0"> <!-- hay que meter img de categoria aqui -->
+                                            <img class="w-8 h-8 rounded-full" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallup.net%2Fwp-content%2Fuploads%2F2016%2F03%2F09%2F335092-Penguins_of_Madagascar-cartoon-movies.jpg&f=1&nofb=1&ipt=edb7643656eecc76e5d889f11f5b45dfe88a3d8ccf46f84b9611f2384e045fdd&ipo=images">
+                                        </div>
+                                        <div class="flex-1 min-w-0 ms-4">
+                                            <!-- nombre thingo -->
+                                            <p class="text-md font-medium text-gray-900 truncate dark:text-white">
+                                                Pingüinismo
+                                            </p>
+                                            <!-- nombre categoria -->
+                                            <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                                Deportes
+                                            </p>
+                                            <p class="text-sm text-gray-900 truncate dark:text-white">
+                                                3M PLs
+                                            </p>
+                                        </div>
+        
+                                        <div class="inline-flex items-center"> <!-- contenedor botones -->
+                                            <a onclick="" class="inline-flex items-center justify-center w-10 h-10 sm:me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                                                </svg> 
+                                            </a>
+                                            <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8.597 3.2A1 1 0 0 0 7.04 4.289a3.49 3.49 0 0 1 .057 1.795 3.448 3.448 0 0 1-.84 1.575.999.999 0 0 0-.077.094c-.596.817-3.96 5.6-.941 10.762l.03.049a7.73 7.73 0 0 0 2.917 2.602 7.617 7.617 0 0 0 3.772.829 8.06 8.06 0 0 0 3.986-.975 8.185 8.185 0 0 0 3.04-2.864c1.301-2.2 1.184-4.556.588-6.441-.583-1.848-1.68-3.414-2.607-4.102a1 1 0 0 0-1.594.757c-.067 1.431-.363 2.551-.794 3.431-.222-2.407-1.127-4.196-2.224-5.524-1.147-1.39-2.564-2.3-3.323-2.788a8.487 8.487 0 0 1-.432-.287Z"/>
+                                                </svg>
+                                            </a>
+                                            <a onclick="" class="inline-flex items-center justify-center w-10 h-10 me-2 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300 cursor-pointer">
+                                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M11.4401 2.24219C9.2088 2.24219 7.16896 3.50383 5.6563 5.62188C5.41732 5.95547 5.19255 6.31094 4.9831 6.68828C5.03943 6.79766 5.09521 6.90703 5.15044 7.02187C5.69458 8.16484 6.24474 9.5375 5.77114 10.6859C5.57974 11.1453 5.192 11.4352 4.79169 11.6156C4.39193 11.7906 3.96153 11.8672 3.56669 11.8672C3.48685 11.8672 3.40482 11.8617 3.32278 11.8562C3.232 12.5508 3.18442 13.2672 3.18442 14C3.18442 17.2867 4.14091 20.2563 5.6563 22.3781C7.16896 24.4945 9.2088 25.7578 11.4401 25.7578C13.6713 25.7578 15.7111 24.4945 17.226 22.3781C17.7783 21.6016 18.2541 20.7156 18.6369 19.7422H11.4401V18.7578H26.3151C27.4088 18.7578 27.4088 16.2422 26.3151 16.2422H11.4401V15.2578H19.6486C19.6815 14.8477 19.6979 14.4266 19.6979 14C19.6979 10.7133 18.7408 7.74375 17.226 5.62188C15.7111 3.50383 13.6713 2.24219 11.4401 2.24219ZM3.56724 6.16875C3.36161 6.50781 3.10896 6.95078 2.87216 7.44844C2.3663 8.50391 2.04255 9.75625 2.27224 10.3141C2.3313 10.4563 2.49099 10.6039 2.74036 10.7133C2.98974 10.8227 3.30966 10.8828 3.56724 10.8828C3.82482 10.8828 4.14474 10.8227 4.39411 10.7133C4.64403 10.6039 4.80318 10.4563 4.86278 10.3141C5.09193 9.75625 4.76818 8.50391 4.26286 7.44844C4.02552 6.95078 3.77286 6.50781 3.56724 6.16875ZM7.94005 11.7578C8.68927 11.7578 9.30724 12.3758 9.30724 13.125C9.30724 13.8742 8.68927 14.4922 7.94005 14.4922C7.19083 14.4922 6.57286 13.8742 6.57286 13.125C6.57286 12.3758 7.19083 11.7578 7.94005 11.7578ZM14.9401 11.7578C15.6893 11.7578 16.3072 12.3758 16.3072 13.125C16.3072 13.8742 15.6893 14.4922 14.9401 14.4922C14.1908 14.4922 13.5729 13.8742 13.5729 13.125C13.5729 12.3758 14.1908 11.7578 14.9401 11.7578ZM11.4401 20.9453C12.0252 20.9453 12.5611 21.1203 12.9713 21.4266C13.3869 21.7383 13.6822 22.2086 13.6822 22.75C13.6822 23.2914 13.3869 23.7617 12.9713 24.0734C12.5611 24.3797 12.0252 24.5547 11.4401 24.5547C10.8549 24.5547 10.319 24.3797 9.9088 24.0734C9.49318 23.7617 9.19786 23.2914 9.19786 22.75C9.19786 22.2086 9.49318 21.7383 9.9088 21.4266C10.319 21.1203 10.8549 20.9453 11.4401 20.9453Z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------------------------------- -->
+
+<!-- Codigo de la navbar y el menu -->
+<header class="fixed w-full z-20 sm:z-0">
+    <!-- Codigo de la barra de navegacion -->
+    <nav class="relative z-20">
+        <div class="relative z-20 w-full sm:w-max flex justify-between sm:rounded-b-lg bg-white border-gray-600 dark:bg-gray-900 dark:border-gray-200 p-4 flex-wrap items-center h-full">
+            <a class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
+                <img src="./resources/mascota2.png" class="h-8" alt="Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BucketList</span>
+            </a>
+            <!-- Trigger del drawer (hamburguesa) -->
+            <button data-drawer-target="drawer" data-drawer-toggle="drawer" data-drawer-placement="left" aria-controls="drawer" aria-expanded="false" type="button" class="ml-4 inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Codigo del drawer -->
+    <div id="drawer" tabindex="-1" aria-labelledby="drawer-left" class="fixed top-0 left-0 z-20 h-screen p-4 overflow-y-auto overflow-x-visible transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800">
+        <h5 id="drawer-left" class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
+            <svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+            </svg>Menu
+        </h5>
+
+        <!-- cierre del drawer -->
+        <button type="button" data-drawer-hide="drawer" aria-controls="drawer" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+        </button>
+
+        <div class="py-4 overflow-y-auto overflow-x-visible">
+
+            <ul class="space-y-2 font-medium mb-4 overflow-x-visible">
+               <li> <!-- cada <li> es un elemento del drawer -->
+                    <form id="formbusqueda" class="max-w-lg mx-auto flex">
+                        <div class="relative w-full">
+                            <input id="inputbusqueda" type="search" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Buscar nombre de usuario" required />
+                            <button id="botonbusqueda" type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+               </li>
+               <li class="!overflow-visible">
+                    <!-- controlador de popover -->
+                    <div data-popover-target="popover" data-popover-placement="right" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/>
+                        </svg>
+                        <span class="ms-3">Añadir thingo</span>
+                    </div>
+               </li>
+            </ul>
+
+            <ul class="space-y-2 font-medium border-t border-gray-200 dark:border-gray-700"> <!-- aqui van redirecciones a cada pagina -->
+                <li>
+                    <a id="linkfeed" href="http://127.0.0.1:5500/src/feed.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
+                       <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
+                          <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
+                          <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
+                       </svg>
+                       <span class="ms-3">Feed</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="linkperfil" href="http://127.0.0.1:5500/src/profile.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
+                       <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                          <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
+                       </svg>
+                       <span class="flex-1 ms-3 whitespace-nowrap">Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a id="linklogout" href="http://127.0.0.1:5500/src/index.html" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group cursor-pointer">
+                       <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
+                       </svg>
+                       <span class="flex-1 ms-3 whitespace-nowrap">Log out</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</header>
+
+<!-- Popover -->
+<div data-popover id="popover" role="tooltip" class="absolute z-20 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+    <div class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
+        <h3 class="font-semibold text-gray-900 dark:text-white">Thingo</h3>
+    </div>
+    <div class="px-3 py-2">
+        <form id="formaddthingo" class="max-w-sm mx-auto">
+            <div class="mb-5">
+              <label for="thingo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thingo</label>
+              <input id="inputaddnombrethingo" type="thingo" placeholder="¿Qué has hecho?" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+            </div>
+            <div class="mb-5">
+              <label for="categoria" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria</label>
+              <input id="inputaddcategoriathingo" type="categoria" placeholder="¿Dónde encaja?" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+            </div>
+            <button id="buttonaddthingo" type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Añadir</button>
+        </form>
+    </div>
+<div data-popper-arrow></div>
+
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+<script src="./js/feed.js" type="module"></script>
+<script src="./js/feed/onclicks.js" type="module"></script>
+
+</div>
+</body>
+</html>
